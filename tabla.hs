@@ -1,6 +1,9 @@
 -- Programa en Haskell para dar formato a tablas de markdown
 
 import System.Environment
+import Markdown
+import LaTeX
+import CSV
 
 main = do
     argumentos <- getArgs
