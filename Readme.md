@@ -10,6 +10,8 @@ Converts tables between CSV, Markdown and LaTeX formats.
 Alternatively, you can just run it directly with
 `runhaskell tabla.hs`.
 
+Put the file `esqueleto.tex` in `~/.config/tabla/`
+
 ## Usage
 
 Accepts two arguments. Syntax is:
