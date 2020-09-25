@@ -22,7 +22,7 @@ Accepts any of the following format indications:
 - markdown format: md, markdown, Markdown
 - csv format: csv, CSV
 
-Pipe your markdown tables into it to change their format.
+Pipe your tables into it to change their format.
 
 Default (no arguments) assumes tables are in markdown format and adjusts spacing to make them easily readable.
 
