@@ -1,27 +1,28 @@
 # Markdown Table Formatter
 
 Written to learn Haskell.
-Formats tables in one of two ways.
-
-You may ask why use this instead of another program that might do the same thing.
-
-There is no reason.
-Those other programs are probably better: I made this for myself, but you are welcome to use it if you want to.
+Converts tables between CSV, Markdown and LaTeX formats.
 
 ## Compilation
 
-`ghc tabla.hs` to compile.
+`ghc --make tabla.hs` to compile.
 
 Alternatively, you can just run it directly with
 `runhaskell tabla.hs`.
 
 ## Usage
 
-Pipe your markdown tables into it to get them formatted.
-By default it will make them look pretty while conforming to github flavored markdown.
+Accepts two arguments. Syntax is:
+`tabla <fromformat> <toformat>`
 
-Accepts the switch "-l" to draw underlines below every line.
-This will not look good rendered in github, but it is a more attractive format if you just read your markdown directly in plain text.
+Accepts any of the following format indications:
+- LaTeX format: tex, latex, Tex, LaTeX, Latex
+- markdown format: md, markdown, Markdown
+- csv format: csv, CSV
 
-This is mostly designed to format tables from within a vim session.
-Use `:<range> !runhaskell tabla.hs` to format a table in the mentioned range of lines.
+Pipe your markdown tables into it to change their format.
+
+Default (no arguments) assumes tables are in markdown format and adjusts spacing to make them easily readable.
+
+This is mostly intended for use in formatting tables from within a vim session.
+Use `:<range> !runhaskell tabla.hs <fromformat> <toformat>` to format a table in the mentioned range of lines.

@@ -1,6 +1,7 @@
 -- Programa en Haskell para traducir formatos de tablas
 
 import System.Environment (getArgs)
+import System.Directory (getHomeDirectory)
 import System.IO
 import qualified LaTeX as L
 import qualified Markdown as M
@@ -8,7 +9,8 @@ import qualified CSV as C
 
 main = do
     argumentos <- getArgs
-    archivo <- readFile "esqueleto.tex" -- lazy IO, si no es relevante no lo lee
+    home <- getHomeDirectory
+    archivo <- readFile $ home ++ "/.config/tabla/esqueleto.tex" -- lazy IO, si no es relevante no lo lee
     if argumentos == [] -- Markdown es default.
         then interact $ unlines . M.toMarkdown . M.fromMarkdown . lines
         else do
