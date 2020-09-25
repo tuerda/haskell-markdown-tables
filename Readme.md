@@ -1,4 +1,4 @@
-# Markdown Table Formatter
+# Table Formatter and Converter
 
 Written to learn Haskell.
 Converts tables between CSV, Markdown and LaTeX formats.
